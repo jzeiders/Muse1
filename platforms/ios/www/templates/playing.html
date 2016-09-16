@@ -1,0 +1,17 @@
+<ion-view view-title="Playing">
+  <ion-content>
+    <label class="item item-input">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" ng-model-options='{ debounce: 1000 }'placeholder="Search" ng-change="search()" ng-model="state.term">
+    </label>
+    <div ng-repeat="card in cards">
+      <div class="item item-avatar">
+        <img src="{{card.artwork_url}}">
+        <h2> {{card.title}} </h2>
+      </div>
+      <a class="item item-icon-left assertive" ng-click="musicButton(card.stream_url)">
+        <i class="icon ion-music-note"></i> Start listening
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

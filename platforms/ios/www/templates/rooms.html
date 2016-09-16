@@ -1,0 +1,24 @@
+<ion-view view-title="Rooms">
+  <div class="bar bar-header">
+    <button class="button button-clear button-positive">Edit</button>
+  </div>
+ <ion-content>
+  <ion-list ng-repeat="room in rooms">
+    <div class="card">
+      <div class="item item-divider">
+        {{room.name}}
+      </div>
+      <div class="item item-text-wrap">
+        {{room.type}} Event at {{room.loc.lat}}
+      </div>
+      <div class="item item-divider">
+        {{room.open}} Event
+      </div>
+
+    </div>
+  </ion-list>
+  <ion-list>
+      <button class="button button-full button-positive" ng-click="createRoom()"> Create New Event </button>
+    </ion-list>
+  </ion-content>
+</ion-view>
