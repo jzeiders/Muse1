@@ -1,0 +1,19 @@
+<ion-view view-title="Home">
+  <ion-content>
+    <div class="list-card">
+      <div class="item item-avatar">
+        <img src="avatar.jpg">
+        <h2>Current Room: {{room.name}}</h2>
+      </div>
+    </div>
+    <div ng-repeat="track in room.songs">
+      <div class="list">
+        <div class="item item-avatar">
+          <img src="song.jpg">
+          <h2>{{song.title}}</h2>
+          <p>{{song.artist}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
